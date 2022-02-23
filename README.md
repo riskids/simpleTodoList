@@ -1,1 +1,1 @@
-# To Do List Mobile Apps created with React-Native
+# To Do List Apps with React-Native
