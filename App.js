@@ -19,11 +19,17 @@ const App = () => {
       return prevItems.filter(item => item.id != id)
     })
   }
+
+  const addTodos = (textInput) =>{
+    setTodos(prevItems=>{
+      return [{id:uuid.v4(),text: textInput},...prevItems]
+    })
+  }
   
   return (
     <View style={styles.container}>
       <Header title="To Do List"/>
-      <AddList/>
+      <AddList addTodos={addTodos} />
       <FlatList
         data={todos}
         renderItem={ ({item}) => <ItemList todo={item} doneTodos={doneTodos} /> }

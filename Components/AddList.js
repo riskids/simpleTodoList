@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-const AddList = () => {
+const AddList = ({addTodos}) => {
 
     const [text,setText] = useState('')
 
@@ -13,7 +13,7 @@ const AddList = () => {
   return (
     <View>
         <TextInput style={styles.txtInput} placeholder="Yang Akan Saya Lakukan..." onChangeText={onChange} />
-        <TouchableOpacity style={styles.button} >
+        <TouchableOpacity style={styles.button} onPress={()=>addTodos(text)} >
             <Text style={styles.txt}>
                 <Icon name="plus" size={30} />
                 Tambah
