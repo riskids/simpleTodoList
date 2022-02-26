@@ -1,5 +1,5 @@
 import React, {useState, setState} from 'react'
-import { View, Text, StyleSheet,FlatList } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Alert } from 'react-native'
 import uuid from 'react-native-uuid'
 import AddList from './Components/AddList'
 
@@ -21,9 +21,17 @@ const App = () => {
   }
 
   const addTodos = (textInput) =>{
-    setTodos(prevItems=>{
-      return [{id:uuid.v4(),text: textInput},...prevItems]
-    })
+
+    if (!textInput) {
+      Alert.alert('Oops','List masih kosong nih, Masukin data dulu yu!',{
+        text:'Siap'
+      })
+    } else {
+      setTodos(prevItems=>{
+        return [{id:uuid.v4(),text: textInput},...prevItems]
+      })
+    }
+    
   }
   
   return (
