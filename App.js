@@ -1,8 +1,8 @@
 import React, {useState, setState} from 'react'
 import { View, Text, StyleSheet, FlatList, Alert } from 'react-native'
 import uuid from 'react-native-uuid'
-import AddList from './Components/AddList'
 
+import AddList from './Components/AddList'
 import Header from './Components/Header'
 import ItemList from './Components/ItemList'
 
@@ -23,8 +23,8 @@ const App = () => {
   const addTodos = (textInput) =>{
 
     if (!textInput) {
-      Alert.alert('Oops','List masih kosong nih, Masukin data dulu yu!',{
-        text:'Siap'
+      Alert.alert('Oops','List Masih kosong nih, Masukin data dulu yu!',{
+        text:'OK'
       })
     } else {
       setTodos(prevItems=>{
