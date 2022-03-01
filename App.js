@@ -8,7 +8,7 @@ import ItemList from './Components/ItemList'
 
 const App = () => {
   const [todos, setTodos] = useState([
-    {id:uuid.v4(), text:'Ngepel'},
+    {id:uuid.v4(), text:'Cuci Piring'},
     {id:uuid.v4(), text:'Nyapu'},
     {id:uuid.v4(), text:'Mandi'},
     {id:uuid.v4(), text:'Bersihkan Kolam'},
