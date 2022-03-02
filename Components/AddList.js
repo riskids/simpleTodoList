@@ -16,7 +16,7 @@ const AddList = ({addTodos}) => {
         <TouchableOpacity style={styles.button} onPress={()=>addTodos(text)} >
             <Text style={styles.txt}>
                 <Icon name="plus" size={30} />
-                Tambah
+                Add
             </Text>
         </TouchableOpacity>
     </View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         height:60,
     },
     button:{
-        backgroundColor:'purple',
+        backgroundColor:'#0092fa',
         margin:5,
         padding:10,
         justifyContent:'flex-start'
