@@ -23,7 +23,7 @@ const App = () => {
   const addTodos = (textInput) =>{
 
     if (!textInput) {
-      Alert.alert('Oops','List Masih kosong nih, Masukin data dulu yu!',{
+      Alert.alert('Oops','List Masih nih, Masukin data dulu yu!',{
         text:'OK'
       })
     } else {
